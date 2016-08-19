@@ -19,25 +19,8 @@ def data_entry(title,summ, link, date):
 #creating the table
 create_table()
 
-###The list of rss feed urls from which we are parsing
-##urllist = ['https://www.google.com/alerts/feeds/04151699818659974044/832217289615740120']
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/17448190345750142348')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/4902490110586677193')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9792326531306852478')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/1132177771832580727')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9792326531306853988')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/1132177771832581875')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/832217289615739863')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/4902490110586676840')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/16414914949592282687')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/17448190345750141739')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9365742344284455529')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9837625796905401774')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/2227167955040292860')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9502666027096050020')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/9502666027096049988')
-##urllist.append('https://www.google.com/alerts/feeds/04151699818659974044/5870008646470190912')
-url = 'http://www.metal.com/rss/aluminum'
+#asking user to input the url of the RSS feed
+url = input("Enter the url: ")
 
 #create an excel workbook
 wb = Workbook()

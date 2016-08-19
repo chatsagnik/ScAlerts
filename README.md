@@ -3,6 +3,7 @@ A Python program that aggregates articles from provided RSS feeds, stores the ar
 
 
 --Technical Details--
+
 1. The urllist[] in scalertsgoogle.py contains various RSS feeds which were created using alerts.google.com.
 
 2. The program utilises the feedparser module to parse the RSS feeds, the sqlite3 module to establish a connection with a database that stores the articles and the openpyxl module to create a new .xlsx file which contains only the latest articles provided by the feed.

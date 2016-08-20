@@ -8,7 +8,7 @@ A Python program that aggregates articles from provided RSS feeds, stores the ar
 * `SQLite3`
 * Any Spreadsheet viewer that can open *.xlsx files.
 
-#### Required Modules for Python
+#### Required Modules for Python:
 You can easily use `pip install <module_name>` to install these modules.
 * `feedparser` module
 * `sqlite3` module
@@ -23,8 +23,8 @@ You can easily use `pip install <module_name>` to install these modules.
 #Technical Details
 
 1. 
-* `scalerts.py` takes one RSS feed URL and parses it.
-* `scalertsgoogle.py` is merely an example on how `scalerts.py` can be modified to take multiple RSS feeds and parse them accordingly.
+  * `scalerts.py` takes one RSS feed URL and parses it.
+  * `scalertsgoogle.py` is merely an example on how `scalerts.py` can be modified to take multiple RSS feeds and parse them accordingly.
 
 2. The urllist[] in scalertsgoogle.py contains various RSS feeds which were created using [Google Alerts](https://www.google.com/alerts). You can even also use prexisting dedicated RSS feeds like [this](http://www.metal.com/rss/aluminum) or [this](http://timesofindia.indiatimes.com/rssfeedstopstories.cms). 
 

@@ -1,6 +1,13 @@
 # scalerts
 A Python program that aggregates articles from provided RSS feeds, stores the articles in an SQLite database and creates a .xlsx file with only the latest articles in it. 
 
+# How to run
+
+## Using `Command Prompt` (For Windows) 
+* Add python to your PATH variable
+* Migrate to folder containing the file scalerts.py by using
+> python scalerts.py
+
 
 --Technical Details--
 

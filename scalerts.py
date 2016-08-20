@@ -69,19 +69,19 @@ def parse_feed(url):
 def printToFile(title,summary,link,published,i):
     ws.cell(row = i, column = 1).value = title
     # Save the file
-    wb.save("scalertsgoogle.xlsx")
+    wb.save("scalerts.xlsx")
     
     ws.cell(row = i, column = 2).value = summary
     # Save the file
-    wb.save("scalertsgoogle.xlsx")
+    wb.save("scalerts.xlsx")
 
     ws.cell(row = i, column = 3).value = link
     # Save the file
-    wb.save("scalertsgoogle.xlsx")
+    wb.save("scalerts.xlsx")
 
     ws.cell(row = i, column = 4).value = published
     # Save the file
-    wb.save("scalertsgoogle.xlsx")
+    wb.save("scalerts.xlsx")
     
 #insert posts into the database
 insertPost()

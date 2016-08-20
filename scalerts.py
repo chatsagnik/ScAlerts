@@ -52,6 +52,7 @@ def insertPost():
     for i in range(0,len(urllist)):
         parse_feed(urllist[i])
 
+#This global variable controls entry into the excel file
 rownum = 1;
 #function to parse url feeds and feed to the database
 def parse_feed(url):

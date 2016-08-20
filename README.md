@@ -2,7 +2,7 @@
 A feed aggregator built in Python.
 It sources the articles from the hyperlinks of the RSS feeds given in a text file, stores the relevant information in an SQLite3 database and creates a .xlsx file with only the latest articles in it everytime it is run.
 
-# Installation Instructions (For Windows)
+# Installation Instructions (For Windows and Ubuntu)
 
 #### Software required:
 * `Python 3.0` and newer versions
@@ -10,15 +10,18 @@ It sources the articles from the hyperlinks of the RSS feeds given in a text fil
 * Any Spreadsheet viewer that can open *.xlsx files.
 
 #### Required Modules for Python:
-You can easily use `pip install <module_name>` to install these modules.
+You can easily use `pip install <module_name>` on Windows or `sudo pip install <module_name>` on Ubuntu to install these modules.
 * `feedparser` module
-* `sqlite3` module
 * `openpyxl` module
 
 #### To run the program using `Command Prompt` do the following:
 * Add python to your `PATH` variable.
 * Migrate to folder containing the file `scalerts.py` by using `cd` command.
 * Now you can use `python scalerts.py` to run the file.
+
+#### To run the program from `Terminal` do the following:
+* Migrate to folder containing the file `scalerts.py` by using `cd` command.
+* Use the `python scalerts.py` to run the file.
  
 # Information
 

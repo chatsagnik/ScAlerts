@@ -2,9 +2,10 @@ import feedparser
 import sqlite3
 from time import gmtime, strftime
 from openpyxl import Workbook
+import re
 
 #establishing connection to the database and creating a cursor
-conn = sqlite3.connect('scalertsma.db')
+conn = sqlite3.connect('scalerts.db')
 c = conn.cursor()
 
 #The table schema 
@@ -19,15 +20,10 @@ def data_entry(title,summ, link, date):
 #creating the table
 create_table()
 
-#asking user to input the url of the RSS feed
-url = input("Enter the url: ")
-
 #create an excel workbook
 wb = Workbook()
-
 # grab the active worksheet
 ws = wb.active
-
 #populate the header of the worksheet
 ws.cell(row=1,column=1).value = "Title"
 ws.cell(row=1,column=2).value = "Summary"
@@ -45,43 +41,50 @@ def post_in_db(title):
         #a post with the title exists
         return 1
 
-
-#function to parse url feeds and feed to the database
-def parse_feed(url):
-    feed= feedparser.parse(url)
-    #inserting posts from feed into the database and the excel file only if post is not present in the database
-    row = 2;
-    for post in feed.entries:
-        if not post_in_db(post.title):
-            printToFile(post.title, post.summary, post.link, post.published,row)
-            data_entry(post.title, post.summary, post.link, post.published)
-            row = row+1
+#create a list by reading the list of URLs from a text file containing the list of URLs
+urllist = list()
+count = 0
+with open('urlList.txt') as fp:
+    urllist = fp.read().splitlines()
 
 #function to insert posts from the list of urls
 def insertPost():
-    parse_feed(url)
-    
+    for i in range(0,len(urllist)):
+        parse_feed(urllist[i])
+
+rownum = 1;
+#function to parse url feeds and feed to the database
+def parse_feed(url):
+    feed= feedparser.parse(url)
+    global rownum
+    #inserting posts from feed into the database and the excel file only if post is not present in the database
+    for post in feed.entries:
+        if not post_in_db(post.title):
+            data_entry(post.title, post.summary, post.link, post.published)
+            rownum = rownum + 1
+            printToFile(post.title, post.summary, post.link, post.published,rownum)
+
 #function to read the database feeds and print recent posts
 def printToFile(title,summary,link,published,i):
-    ws.cell(row=i,column=1).value = title
+    ws.cell(row = i, column = 1).value = title
     # Save the file
-    wb.save("scalertsma.xlsx")
+    wb.save("scalertsgoogle.xlsx")
     
-    ws.cell(row=i,column=2).value = summary
+    ws.cell(row = i, column = 2).value = summary
     # Save the file
-    wb.save("scalertsma.xlsx")
+    wb.save("scalertsgoogle.xlsx")
 
-    ws.cell(row=i,column=3).value = link
+    ws.cell(row = i, column = 3).value = link
     # Save the file
-    wb.save("scalertsma.xlsx")
+    wb.save("scalertsgoogle.xlsx")
 
-    ws.cell(row=i,column=4).value = published
+    ws.cell(row = i, column = 4).value = published
     # Save the file
-    wb.save("scalertsma.xlsx")
+    wb.save("scalertsgoogle.xlsx")
     
 #insert posts into the database
 insertPost()
 
-#closing the cursor and database connection
+#closing the cursors and database connections
 c.close()
 conn.close()

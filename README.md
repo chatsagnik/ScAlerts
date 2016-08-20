@@ -1,15 +1,22 @@
 # scalerts
 A Python program that aggregates articles from provided RSS feeds, stores the articles in an SQLite database and creates a .xlsx file with only the latest articles in it. 
 
-# How to run
+# Installation Instructions (For Windows)
 
-## Using `Command Prompt` (For Windows) 
-* Add python to your PATH variable
-* Migrate to folder containing the file scalerts.py by using
-> python scalerts.py
+### Required Modules for Python
+
+You can easily use `pip install <module_name>` to install these modules.
+* feedparser module
+* sqlite3 module
+* openpyxl module
+
+### Using `Command Prompt` 
+* Add python to your PATH variable.
+* Migrate to folder containing the file scalerts.py by using cd command.
+* Now you can use `python scalerts.py` to run the file.
 
 
---Technical Details--
+#Technical Details
 
 1. scalerts.py takes one RSS feed URL and parses it. scalertsgoogle.py shows how it can be modified to take multiple RSS feeds and parse them accordingly.
 
@@ -19,8 +26,4 @@ A Python program that aggregates articles from provided RSS feeds, stores the ar
 
 4. On running the program for the first time, one will see the accompanying database file and excel file being created. Henceforth, the database file will be appended with new incoming content and keep increasing in size while the excel file will be overwritten with the new posts.
 
-5. If user wants to use the excel file for a later time they must make a backup as there is a high probability of the file getting overwritten. They may also access the database directly in such cases.
-
-6. If for a particular day the feeds come up with lesser articles than the preceding day, then the excel file will not be completely overwritten, and may contain some news article from the previous day lower down in the file. The Datestamp column is in place to prevent confusion about the publication date of a particular post.
-
-7. This was created to help content writers access relevant news in one place.
+5. If user wants to use the generated excel file for a later time they must make a backup as the file will get overwritten. They may also access the database directly in such cases.

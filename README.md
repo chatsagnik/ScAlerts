@@ -21,7 +21,8 @@ You can easily use `pip install <module_name>` to install these modules.
  
 # Information
 
-* The `urlList.txt` file can be edited to add URLs. Since the program pulls the URLs from this file, it should under no circumstances be deleted.
+* The `urlList.txt` file in the repository contains a list of RSS feed URLs. *This can and should be edited to add your own URLs*. Since the program pulls the URLs from this file, *it should under no circumstances be deleted*.
+* The `scalerts.db` and `scalerts.xlsx` file in this repository are example database and spreadsheet files that were created using the `scalerts.py` program. *They should be deleted before the program is compiled for the first time*.
 * You can find instructions on how to make dedicated RSS feeds for any topic using Google alerts [here](https://support.google.com/alerts/?hl=en#4815700).
 * On running the program for the first time, one will see the accompanying database file `scalerts.db` and excel file `scalerts.xlsx` being created.
  * The database file will be appended with new incoming content and keep increasing in size. _This file should not be deleted casually_.

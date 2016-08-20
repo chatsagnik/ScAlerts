@@ -1,5 +1,6 @@
 # scalerts
-A Python program that serves as a news aggregator. It sources the articles from the hyperlinks of the RSS feeds given in a text file, stores the relevant information in an SQLite3 database and creates a .xlsx file with only the latest articles in it everytime it is run.
+A feed aggregator built in Python.
+It sources the articles from the hyperlinks of the RSS feeds given in a text file, stores the relevant information in an SQLite3 database and creates a .xlsx file with only the latest articles in it everytime it is run.
 
 # Installation Instructions (For Windows)
 

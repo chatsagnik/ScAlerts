@@ -32,4 +32,4 @@ You can easily use `pip install <module_name>` on Windows or `sudo pip install <
  * The database file will be appended with new incoming content and keep increasing in size. _This file should not be deleted casually_.
  * The excel file will be overwritten with new posts everytime the program is compiled. *Maintaining daily backups of this file is the user's responsibility*. Do not save backups with the same name( and in the same folder) as the `scalerts.xlsx` file.
 
-## *Used by [AlCircle.com](http://www.alcircle.com/)
+#### Used by [AlCircle.com](http://www.alcircle.com/)

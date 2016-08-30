@@ -17,11 +17,11 @@ You can easily use `pip install <module_name>` on Windows or `sudo pip install <
 #### To run the program using `Command Prompt` do the following:
 * Add python to your `PATH` variable.
 * Migrate to folder containing the file `scalerts.py` by using `cd` command.
-* Now you can use `python scalerts.py` to run the file.
+* Now you can use the `python scalerts.py` command to run the file.
 
 #### To run the program from `Terminal` do the following:
 * Migrate to folder containing the file `scalerts.py` by using `cd` command.
-* Use the `python scalerts.py` to run the file.
+* Use the `python scalerts.py` command to run the file.
  
 # Information
 

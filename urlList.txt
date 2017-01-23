@@ -1,4 +1,5 @@
 http://www.metal.com/rss/aluminum
+https://www.bing.com/news/search?q=aluminium&format=RSS
 https://www.google.com/alerts/feeds/04151699818659974044/832217289615740120
 https://www.google.com/alerts/feeds/04151699818659974044/17448190345750142348
 https://www.google.com/alerts/feeds/04151699818659974044/4902490110586677193
